@@ -1,6 +1,6 @@
-import { Game } from "../types";
+import { Game, Genre } from "../types";
 import useData from "./useData";
 
-const useGames = () => useData<Game>('/games');
+const useGames = (selectedGenre: Genre | null) => useData<Game>('/games', { params: { genres: selectedGenre?.id }}, [selectedGenre?.id]);
 
 export default useGames;

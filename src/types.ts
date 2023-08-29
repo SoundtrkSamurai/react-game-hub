@@ -26,3 +26,8 @@ export interface FetchGenresResponse {
   count: number;
   results: Genre[];
 }
+
+export interface FetchResponse<T> {
+  count: number;
+  results: T[];
+}

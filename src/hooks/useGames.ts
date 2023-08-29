@@ -1,29 +1,6 @@
-import { useState, useEffect } from "react";
-import apiClient from "../services/api-client";
-import { Game, FetchGamesResponse } from "../types";
-import { CanceledError } from "axios";
+import { Game, Genre } from "../types";
+import useData from "./useData";
 
-const useGames = () => {
-  const [games, setGames] = useState<Game[]>([]);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    const controller = new AbortController();
-    
-    apiClient
-      .get<FetchGamesResponse>("/games")
-      .then((res) => setGames(res.data.results))
-      .catch((err) => {
-        if (err instanceof CanceledError) return;
-        setError(err.message);
-      });
-    
-    return () => controller.abort();
-  }, []);
-
-  return {
-    games, error
-  }
-};
+const useGames = (selectedGenre: Genre | null) => useData<Game>('/games', { params: { genres: selectedGenre?.id }}, [selectedGenre?.id]);
 
 export default useGames;

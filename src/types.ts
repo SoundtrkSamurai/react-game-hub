@@ -32,3 +32,15 @@ export interface FetchResponse<T> {
   count: number;
   results: T[];
 }
+
+export interface Platform {
+  id: number;
+  name: string;
+  slug: string;
+}
+
+export interface GameQuery {
+  genre: Genre | null;
+  platform: Platform | null;
+  sortOrder: string;
+}

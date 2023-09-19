@@ -1,10 +1,10 @@
- export interface Platform {
+ export type Platform = {
   id: number;
   name: string;
   slug: string;
  }
 
- export interface Game {
+ export type Game = {
   id: number;
   name: string;
   background_image: string;
@@ -12,34 +12,28 @@
   metacritic: number;
 }
 
-export interface FetchGamesResponse {
+export type FetchGamesResponse = {
   count: number;
   results: Game[];
 }
 
-export interface Genre {
+export type Genre = {
   id: number;
   name: string;
   image_background: string;
 }
 
-export interface FetchGenresResponse {
+export type FetchGenresResponse = {
   count: number;
   results: Genre[];
 }
 
-export interface FetchResponse<T> {
+export type FetchResponse<T> = {
   count: number;
   results: T[];
 }
 
-export interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
-
-export interface GameQuery {
+export type GameQuery = {
   genre: Genre | null;
   platform: Platform | null;
   sortOrder: string;

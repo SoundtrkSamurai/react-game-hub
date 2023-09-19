@@ -1,9 +1,9 @@
 import { Heading } from '@chakra-ui/react';
 import { GameQuery } from '../types';
 
-interface Props {
+type Props = {
   gameQuery: GameQuery;
-}
+};
 
 const GameHeading = ({ gameQuery }: Props) => {
   const heading = `${gameQuery.platform?.name || ''} ${

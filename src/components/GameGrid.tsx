@@ -5,9 +5,9 @@ import GameCardSkeleton from './GameCardSkeleton';
 import GameCardContainer from './GameCardContainer';
 import { GameQuery } from '../types';
 
-interface Props {
+type Props = {
   gameQuery: GameQuery;
-}
+};
 
 const GameGrid = ({ gameQuery }: Props) => {
   const { data, error, isLoading } = useGames(gameQuery);

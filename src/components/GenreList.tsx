@@ -15,10 +15,10 @@ import useGenres from '../hooks/useGenres';
 import getCroppedImageUrl from '../services/image-url';
 import { Genre } from '../types';
 
-interface Props {
+type Props = {
   onSelectGenre: (genre: Genre) => void;
   selectedGenre: Genre | null;
-}
+};
 
 const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   const { data, isLoading, error } = useGenres();

@@ -3,9 +3,9 @@ import logo from '../assets/logo.webp';
 import ColorModeSwitch from './ColorModeSwitch';
 import SearchInput from './SearchInput';
 
-interface Props {
+type Props = {
   onSearch: (searchText: string) => void;
-}
+};
 
 const NavBar = ({ onSearch }: Props) => {
   return (

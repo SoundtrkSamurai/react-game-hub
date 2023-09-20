@@ -21,6 +21,7 @@ export type Genre = {
 export type FetchResponse<T> = {
   count: number;
   results: T[];
+  next: string | null;
 }
 
 export type GameQuery = {

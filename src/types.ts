@@ -25,8 +25,8 @@ export type FetchResponse<T> = {
 }
 
 export type GameQuery = {
-  genre: Genre | null;
-  platform: Platform | null;
+  genreId?: number;
+  platformId?: number;
   sortOrder: string;
   searchText: string;
 }

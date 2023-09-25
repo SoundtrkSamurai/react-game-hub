@@ -8,6 +8,8 @@
   id: number;
   name: string;
   slug: string;
+  genres: Genre[];
+  publishers: Publisher[];
   description_raw: string;
   background_image: string;
   parent_platforms: { platform: Platform }[];
@@ -31,4 +33,9 @@ export type GameQuery = {
   platformId?: number;
   sortOrder: string;
   searchText: string;
+}
+
+export type Publisher = {
+  id: number;
+  name: string;
 }

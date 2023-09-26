@@ -46,3 +46,10 @@ export type Trailer = {
   preview: string;
   data: {480: string; max: string};
 }
+
+export type Screenshot = {
+  id: number;
+  image: string;
+  width?: number;
+  height?: number;
+}

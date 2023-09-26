@@ -39,3 +39,10 @@ export type Publisher = {
   id: number;
   name: string;
 }
+
+export type Trailer = {
+  id: number;
+  name: string;
+  preview: string;
+  data: {480: string; max: string};
+}

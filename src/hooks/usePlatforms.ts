@@ -4,7 +4,7 @@ import APIClient from "../services/api-client";
 import { Platform } from "../types";
 import ms from "ms";
 
-const apiClient = new APIClient<Platform>('platforms/lists/parents');
+const apiClient = new APIClient<Platform>('/platforms/lists/parents');
 
 const usePlatforms = () => useQuery({
   queryKey: ['platforms'],
